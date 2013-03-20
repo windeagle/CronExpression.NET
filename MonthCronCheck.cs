@@ -8,7 +8,7 @@
         /// <summary>
         /// 检查给定的月份值是否满足 Cron 表达式的月份部分所包含的条件
         /// </summary>
-        /// <param name="datePartValue"></param>
+        /// <param name="datePartValue">月份值</param>
         /// <returns></returns>
         public bool Check(int datePartValue)
         {

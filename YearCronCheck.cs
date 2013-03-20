@@ -8,7 +8,7 @@
         /// <summary>
         /// 检查给定的年份值是否满足 Cron 表达式的年份部分所包含的条件
         /// </summary>
-        /// <param name="datePartValue"></param>
+        /// <param name="datePartValue">年份值</param>
         /// <returns></returns>
         public bool Check(int datePartValue)
         {
