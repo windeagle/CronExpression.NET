@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CronExpression.cs" />
     <Compile Include="HourCronCheck.cs" />
     <Compile Include="ICronCheck.cs" />
     <Compile Include="IDayCronCheck.cs" />
