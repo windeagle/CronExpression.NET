@@ -4,37 +4,41 @@ using System.Linq;
 namespace CronExpression.NET
 {
     /// <summary>
-    /// 用于“检查给定的时间是否满足 Cron 表达式的日期部分所包含的条件”的 IDayCronCheck 实现类
+    ///   用于“检查给定的时间是否满足 Cron 表达式的日期部分所包含的条件”的 IDayCronCheck 实现类
     /// </summary>
     public class MonthDayCronCheck : BaseCronCheck, IDayCronCheck
     {
+        #region IDayCronCheck Members
+
         /// <summary>
-        /// 屏蔽了 ICronCheck 接口中的方法
+        ///   屏蔽了 ICronCheck 接口中的方法
         /// </summary>
-        /// <param name="datePartValue"></param>
-        /// <returns></returns>
+        /// <param name="datePartValue"> </param>
+        /// <returns> </returns>
         public bool Check(int datePartValue)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// 检查给定的时间是否满足 Cron 表达式的日期部分所包含的条件
+        ///   检查给定的时间是否满足 Cron 表达式的日期部分所包含的条件
         /// </summary>
-        /// <param name="dateTime">给定的时间值</param>
-        /// <returns></returns>
+        /// <param name="dateTime"> 给定的时间值 </param>
+        /// <returns> </returns>
         public bool Check(DateTime dateTime)
         {
             var datePartValue = dateTime.Day;
             return CheckMonthDay(datePartValue, dateTime);
         }
 
+        #endregion
+
         /// <summary>
-        /// 检查给定的时间是否满足 Cron 表达式的日期部分所包含的条件
+        ///   检查给定的时间是否满足 Cron 表达式的日期部分所包含的条件
         /// </summary>
-        /// <param name="datePartValue">日期值</param>
-        /// <param name="dateTime">给定的时间值</param>
-        /// <returns></returns>
+        /// <param name="datePartValue"> 日期值 </param>
+        /// <param name="dateTime"> 给定的时间值 </param>
+        /// <returns> </returns>
         public bool CheckMonthDay(int datePartValue, DateTime dateTime)
         {
             var sArr = Exp.Split(new[] {','}, StringSplitOptions.RemoveEmptyEntries).Select(item => item.Trim());
@@ -67,7 +71,7 @@ namespace CronExpression.NET
                     if (datePartValue == d1.Day)
                         return true;
                 }
-                //是不是当月的第N个非周末
+                    //是不是当月的第N个非周末
                 else if (s.EndsWith("W"))
                 {
                     int day;

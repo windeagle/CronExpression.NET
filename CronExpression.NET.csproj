@@ -42,9 +42,12 @@
   <ItemGroup>
     <Compile Include="HourCronCheck.cs" />
     <Compile Include="ICronCheck.cs" />
+    <Compile Include="IDayCronCheck.cs" />
     <Compile Include="MonthCronCheck.cs" />
+    <Compile Include="MonthDayCronCheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BaseCronCheck.cs" />
+    <Compile Include="WeekDayCronCheck.cs" />
     <Compile Include="YearCronCheck.cs" />
     <Compile Include="MinuteCronCheck.cs" />
   </ItemGroup>
