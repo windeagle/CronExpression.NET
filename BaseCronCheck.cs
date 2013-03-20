@@ -19,7 +19,7 @@ namespace CronExpression.NET
         /// <remarks>
         /// 所谓基础条件，是指以下条件：
         /// 1.通配符条件
-        /// 2.数组相等条件
+        /// 2.数值相等条件
         /// 3.取值范围条件
         /// 4.间隔值条件
         /// 5.以上四种条件以逗号组合
@@ -39,14 +39,14 @@ namespace CronExpression.NET
         /// 检查给定的值是否满足某项基础条件
         /// </summary>
         /// <param name="datePartValue">日期时间类型的指定部分的值</param>
-        /// <param name="itemExp">条件表达式，支持四种基础条件：通配符条件、数组相等条件、取值范围条件和间隔值条件</param>
+        /// <param name="itemExp">条件表达式，支持四种基础条件：通配符条件、数值相等条件、取值范围条件和间隔值条件</param>
         /// <returns></returns>
         public static bool BaseItemCheck(int datePartValue, string itemExp)
         {
             //通配符条件
             if (itemExp.Equals("*"))
                 return true;
-            //数组相等条件
+            //数值相等条件
             if (itemExp.Equals(datePartValue.ToString(CultureInfo.InvariantCulture)))
                 return true;
             //取值范围条件
