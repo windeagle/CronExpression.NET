@@ -1,0 +1,5 @@
+E:\work\csharp\CronExpression.NET\bin\Debug\CronExpression.NET.dll
+E:\work\csharp\CronExpression.NET\bin\Debug\CronExpression.NET.pdb
+E:\work\csharp\CronExpression.NET\obj\Debug\ResolveAssemblyReference.cache
+E:\work\csharp\CronExpression.NET\obj\Debug\CronExpression.NET.dll
+E:\work\csharp\CronExpression.NET\obj\Debug\CronExpression.NET.pdb
