@@ -54,7 +54,7 @@ namespace CronExpression.NET
                         return true;
                 }
                 //是不是本月第N周的第M天
-                if (s.Contains('#'))
+                else if (s.Contains('#'))
                 {
                     var isArr = s.Split(new[] {'#'}).Select(item => item.Trim()).ToList();
                     if (isArr.Count != 2)
@@ -95,7 +95,7 @@ namespace CronExpression.NET
                         if (datePartValue > (int) d1.DayOfWeek)
                             d1 = d1.AddDays(datePartValue - (int) d1.DayOfWeek).AddDays(-7);
                         else
-                            d1 = d1.AddDays((int) d1.DayOfWeek - datePartValue);
+                            d1 = d1.AddDays(datePartValue - (int) d1.DayOfWeek);
                         if (dateTime.Day == d1.Day)
                             return true;
                     }
