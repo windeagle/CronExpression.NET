@@ -71,7 +71,7 @@ namespace CronExpression.NET
                     if (datePartValue == d1.Day)
                         return true;
                 }
-                    //是不是当月的第N个非周末
+                //是不是当月的第N个非周末
                 else if (s.EndsWith("W"))
                 {
                     int day;
